@@ -157,49 +157,49 @@ declare module 'astro:content' {
   slug: "complete-guide-fullstack-development";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "essential-data-structures-algorithms.md": {
 	id: "essential-data-structures-algorithms.md";
   slug: "essential-data-structures-algorithms";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-become-frontend-master.md": {
 	id: "how-to-become-frontend-master.md";
   slug: "how-to-become-frontend-master";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-split-images-for-social-media.md": {
 	id: "how-to-split-images-for-social-media.md";
   slug: "how-to-split-images-for-social-media";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "image-splitting-for-business.md": {
 	id: "image-splitting-for-business.md";
   slug: "image-splitting-for-business";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "kitchensink.mdx": {
 	id: "kitchensink.mdx";
   slug: "kitchensink";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "mastering-image-splitting.md": {
 	id: "mastering-image-splitting.md";
   slug: "mastering-image-splitting";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "team": {
@@ -208,21 +208,21 @@ declare module 'astro:content' {
   slug: "janette-lynch";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "marcell-ziemann.md": {
 	id: "marcell-ziemann.md";
   slug: "marcell-ziemann";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "robert-palmer.md": {
 	id: "robert-palmer.md";
   slug: "robert-palmer";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 };
 
@@ -234,5 +234,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }

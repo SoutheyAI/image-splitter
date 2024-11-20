@@ -1,26 +1,24 @@
 ---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
-import Testimonials from "@components/testimonials.astro";
-import Faq from "@components/faq.astro";
-import Layout from "@layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const url = Astro.url;
-const lang = getLangFromUrl(url);
-const t = useTranslations(lang);
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
 ---
 
-<Layout title={t('hero.title')}>
+<Layout title="FlexSplitter - Free Online Image Splitter Tool">
   <Container>
     <Hero />
     <Features />
-    <Testimonials />
-    <Faq />
-    <Logos />
-    <Cta />
   </Container>
 </Layout>

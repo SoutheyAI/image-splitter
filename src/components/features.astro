@@ -1,10 +1,11 @@
 ---
 // @ts-ignore
 import { Icon } from '@iconify/react';
-import { Picture } from "astro:assets";
-import previewImage from "assets/split-preview.png";
-import interfaceImage from "assets/split-interface.png";
-import resultImage from "assets/split-result.png";
+import { Image } from 'astro:assets';
+import splitPreview from "../assets/split-preview.png";
+import splitInterface from "../assets/split-interface.png";
+import splitResult from "../assets/split-result.png";
+import HeroUpload from "./hero-upload.astro";
 
 const features = [
   {
@@ -44,15 +45,18 @@ const features = [
     icon: "fluent:arrow-download-24-regular",
   },
 ];
+
 ---
 
 <div class="py-8 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+  <HeroUpload />
+  
   <div class="my-4 flex flex-col gap-8">
     <!-- What is FlexSplitter -->
     <div class="my-4 md:my-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
       <div class="order-1 md:order-1">
-        <Picture
-          src={previewImage}
+        <Image
+          src={splitPreview}
           alt="FlexSplitter preview - Image splitting in action"
           class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
           widths={[200, 400, 600]}
@@ -128,8 +132,8 @@ const features = [
         </div>
       </div>
       <div class="order-1 md:order-2">
-        <Picture
-          src={interfaceImage}
+        <Image
+          src={splitInterface}
           alt="FlexSplitter interface - Easy to use grid controls"
           class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
           widths={[200, 400, 600]}
@@ -143,8 +147,8 @@ const features = [
     <!-- How to Split Your Images -->
     <div class="my-4 md:my-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
       <div class="order-1 md:order-1">
-        <Picture
-          src={resultImage}
+        <Image
+          src={splitResult}
           alt="FlexSplitter result - Perfectly split images"
           class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
           widths={[200, 400, 600]}
@@ -200,9 +204,11 @@ const features = [
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
       {
         features.map((item) => (
-          <div class="flex gap-4 items-start">
-            <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
-              <Icon client:load icon={item.icon} className="text-white" />
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-200 border border-transparent rounded-lg transition-all p-4">
+            <div class="mt-1 bg-primary-100 border shadow-sm border-primary-200 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+              <span class="text-primary-500">
+                <Icon icon={item.icon} width="24" height="24" />
+              </span>
             </div>
             <div>
               <h3 class="font-semibold text-lg">{item.title}</h3>
