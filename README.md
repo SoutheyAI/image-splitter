@@ -164,3 +164,90 @@ TailwindCSS is already configured in this repo, so you can start using it withou
 Feel free to check out [Astro Docs](https://docs.astro.build) or jump into our [Discord Chat](https://web3templates.com/discord).
 
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
+
+# FlexSplitter - Modern Image Splitting Web Application
+
+FlexSplitter is a powerful, user-friendly web application for splitting images into custom grids. Built with Astro.js and TailwindCSS, it offers a modern, responsive interface for all your image splitting needs.
+
+## Features
+
+- 🎯 **Custom Grid Splitting**: Split images into any custom grid size with adjustable rows and columns
+- 🚀 **Batch Processing**: Process multiple images simultaneously
+- 📦 **Multiple Format Support**: Works with PNG, JPG, JPEG, and WEBP formats
+- 👀 **Real-time Preview**: See how your split image will look before downloading
+- ✨ **High Quality Output**: Maintain original image quality with no compression artifacts
+- 💾 **Flexible Download Options**: Get your splits in a ZIP file or download individually
+- 🌐 **Multilingual Support**: Available in multiple languages
+- 🎨 **Modern UI/UX**: Clean, intuitive interface built with TailwindCSS
+- 📱 **Responsive Design**: Works perfectly on desktop and mobile devices
+
+## Live Demo
+
+[Coming Soon]
+
+## Tech Stack
+
+- **Framework**: [Astro.js](https://astro.build)
+- **Styling**: [TailwindCSS](https://tailwindcss.com)
+- **Icons**: [Iconify](https://iconify.design)
+- **UI Components**: Custom components built with TailwindCSS
+- **Internationalization**: Built-in i18n support
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16 or higher
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/SoutheyAI/image-splitter.git
+cd image-splitter
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+# or
+npm install
+```
+
+3. Start the development server:
+```bash
+pnpm dev
+# or
+npm run dev
+```
+
+4. Open your browser and visit `http://localhost:3000`
+
+## Building for Production
+
+To create a production build:
+
+```bash
+pnpm build
+# or
+npm run build
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Based on the [Astroship](https://github.com/surjithctly/astroship) template
+- Icons provided by [Iconify](https://iconify.design)
+- UI inspiration from modern web applications
+
+---
+
+Made with ❤️ by [SoutheyAI](https://github.com/SoutheyAI)
