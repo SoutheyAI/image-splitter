@@ -1,0 +1,71 @@
+---
+const testimonials = [
+  {
+    quote: "This image splitter is a game-changer for my Instagram carousel posts! I can create perfectly split images in seconds, and the quality is amazing.",
+    author: "Sophie Chen",
+    title: "Social Media Influencer",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=Sophie&backgroundColor=b6e3f4&radius=50"
+  },
+  {
+    quote: "As a web designer, I frequently need to split images for responsive layouts. This tool saves me hours of work with its precise grid splitting feature.",
+    author: "Alex Rivera",
+    title: "Web Designer",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=Alex&backgroundColor=ffdfbf&radius=50"
+  },
+  {
+    quote: "The batch processing feature is brilliant! I can split multiple images at once for my e-commerce product galleries. Huge time saver!",
+    author: "Tom Zhang",
+    title: "E-commerce Manager",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=Tom&backgroundColor=c0aede&radius=50"
+  },
+  {
+    quote: "I love how I can preview the splits before downloading. The interface is so intuitive, and the results are always perfect for my digital art projects.",
+    author: "Emma Davis",
+    title: "Digital Artist",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=Emma&backgroundColor=ffd5dc&radius=50"
+  },
+  {
+    quote: "Finally found a reliable tool for splitting panoramic images! The high-quality output and custom grid options are exactly what I needed.",
+    author: "James Wilson",
+    title: "Photographer",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=James&backgroundColor=baffc9&radius=50"
+  },
+  {
+    quote: "This tool is essential for my marketing campaigns. The ability to quickly split images for different social media platforms is invaluable.",
+    author: "Lisa Martinez",
+    title: "Marketing Specialist",
+    avatar: "https://api.dicebear.com/7.x/personas/svg?seed=Lisa&backgroundColor=fff3bf&radius=50"
+  }
+];
+---
+
+<div class="py-16 sm:py-24 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        What Users Say About Image Splitter
+      </h2>
+      <p class="mt-4 text-lg leading-8 text-gray-600">
+        See how our tool has helped content creators and designers streamline their workflow.
+      </p>
+    </div>
+    <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((item) => (
+          <div class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="flex items-center gap-x-4">
+              <img src={item.avatar} alt={item.author} class="h-14 w-14 rounded-full bg-gray-50" />
+              <div>
+                <div class="text-base font-semibold leading-6 text-gray-900">{item.author}</div>
+                <div class="text-sm leading-6 text-gray-600">{item.title}</div>
+              </div>
+            </div>
+            <blockquote class="mt-6">
+              <p class="text-base leading-7 text-gray-600">{item.quote}</p>
+            </blockquote>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

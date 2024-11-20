@@ -1,0 +1,19 @@
+---
+import Container from "./container.astro";
+import { Icon } from '@iconify/react';
+
+---
+
+<div class="mt-24">
+  <Container>
+    <h2 class="text-center text-slate-500">Works with your technologies</h2>
+    <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+      <Icon client:load icon="simple-icons:react" className="h-8 md:h-12 w-auto dark:text-gray-400" />
+      <Icon client:load icon="simple-icons:svelte" className="h-8 md:h-12 w-auto dark:text-gray-400" />
+      <Icon client:load icon="simple-icons:astro" className="h-8 md:h-12 w-auto dark:text-gray-400" />
+      <Icon client:load icon="simple-icons:tailwindcss" className="h-8 md:h-16 w-auto dark:text-gray-400" />
+      <Icon client:load icon="simple-icons:alpinedotjs" className="h-8 md:h-16 w-auto dark:text-gray-400" />
+      <Icon client:load icon="simple-icons:vercel" className="h-8 md:h-12 w-auto dark:text-gray-400" />
+    </div>
+  </Container>
+</div>

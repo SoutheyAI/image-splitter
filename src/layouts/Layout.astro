@@ -1,0 +1,63 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "FlexSplitter"
+  : "FlexSplitter - Professional Image Grid Splitter";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      title={makeTitle}
+      description="FlexSplitter is a powerful tool for splitting images into perfect grids. Ideal for social media, web design, and digital art."
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@surjithctly",
+        site: "@web3templates",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `FlexSplitter - Professional Image Grid Splitter`,
+          image: "https://astroship.web3templates.com/preview.png",
+        },
+        image: {
+          alt: "FlexSplitter Homepage Screenshot",
+        },
+      }}
+    />
+  </head>
+  <body class="dark:bg-gray-900">
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

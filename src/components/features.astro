@@ -1,0 +1,216 @@
+---
+// @ts-ignore
+import { Icon } from '@iconify/react';
+import { Picture } from "astro:assets";
+import previewImage from "assets/split-preview.png";
+import interfaceImage from "assets/split-interface.png";
+import resultImage from "assets/split-result.png";
+
+const features = [
+  {
+    title: "Custom Grid Splitting",
+    description:
+      "Split your images into any custom grid size. Choose the number of rows and columns to create perfect splits for your needs.",
+    icon: "fluent:grid-24-regular",
+  },
+  {
+    title: "Batch Processing",
+    description:
+      "Save time by processing multiple images at once. Perfect for social media content creators and web developers.",
+    icon: "fluent:stack-24-regular",
+  },
+  {
+    title: "Multiple Formats",
+    description:
+      "Support for all popular image formats including PNG, JPG, JPEG, and WEBP. Export in your preferred format.",
+    icon: "fluent:image-24-regular",
+  },
+  {
+    title: "Instant Preview",
+    description:
+      "See how your split image will look before downloading. Make adjustments in real-time for the perfect result.",
+    icon: "fluent:eye-24-regular",
+  },
+  {
+    title: "High Quality Output",
+    description:
+      "Maintain the original image quality in your split pieces. No quality loss or compression artifacts.",
+    icon: "fluent:sparkle-24-regular",
+  },
+  {
+    title: "Easy Download",
+    description:
+      "Download all split pieces in a single ZIP file, or individually. Organized and ready to use.",
+    icon: "fluent:arrow-download-24-regular",
+  },
+];
+---
+
+<div class="py-8 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+  <div class="my-4 flex flex-col gap-8">
+    <!-- What is FlexSplitter -->
+    <div class="my-4 md:my-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+      <div class="order-1 md:order-1">
+        <Picture
+          src={previewImage}
+          alt="FlexSplitter preview - Image splitting in action"
+          class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+        />
+      </div>
+      <div class="order-2 md:order-2">
+        <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          What is FlexSplitter
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-muted-foreground">
+          FlexSplitter is your powerful image processing tool that helps you create perfectly split images for social media, web design, and digital art projects.
+        </p>
+        <div class="mt-4">
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Modern Technology</p>
+              <p class="text-md text-muted-foreground">Built with advanced image processing algorithms for optimal quality</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Cross-Platform Support</p>
+              <p class="text-md text-muted-foreground">Works on any device, from mobile to desktop</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Professional Results</p>
+              <p class="text-md text-muted-foreground">High-quality output optimized for various platforms and uses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose FlexSplitter -->
+    <div class="my-4 md:my-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          Why Choose FlexSplitter
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-muted-foreground">
+          Experience the perfect blend of precision and ease of use, making image splitting faster and more efficient than ever.
+        </p>
+        <div class="mt-4">
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Lightning Fast</p>
+              <p class="text-md text-muted-foreground">Process images instantly with our optimized algorithms</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Easy to Use</p>
+              <p class="text-md text-muted-foreground">Simple and intuitive interface for all users</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">Well Supported</p>
+              <p class="text-md text-muted-foreground">Comprehensive guides and excellent customer support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <Picture
+          src={interfaceImage}
+          alt="FlexSplitter interface - Easy to use grid controls"
+          class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+        />
+      </div>
+    </div>
+
+    <!-- How to Split Your Images -->
+    <div class="my-4 md:my-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24 items-center">
+      <div class="order-1 md:order-1">
+        <Picture
+          src={resultImage}
+          alt="FlexSplitter result - Perfectly split images"
+          class="w-full max-w-md rounded-xl shadow-xl ring-1 ring-gray-400/10"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+        />
+      </div>
+      <div class="order-2 md:order-2">
+        <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          How to Split Your Images
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-muted-foreground">
+          Start creating perfect image splits today - no complex software required. Simply upload your image, choose your grid, and download the results in minutes.
+        </p>
+        <div class="mt-4">
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">1. Upload Your Image</p>
+              <p class="text-md text-muted-foreground">Start with a simple drag and drop</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">2. Choose Grid Size</p>
+              <p class="text-md text-muted-foreground">Select your desired rows and columns</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0">
+            <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500"></span>
+            <div class="space-y-1">
+              <p class="text-md font-medium leading-none">3. Download</p>
+              <p class="text-md text-muted-foreground">Get your perfectly split images instantly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Title -->
+    <div class="text-center max-w-3xl mx-auto mt-16">
+      <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+        Everything you need for perfect image splitting
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-muted-foreground">
+        FlexSplitter comes with all the features you need. It combines powerful functionality with ease of use for professional results.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+      {
+        features.map((item) => (
+          <div class="flex gap-4 items-start">
+            <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+              <Icon client:load icon={item.icon} className="text-white" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

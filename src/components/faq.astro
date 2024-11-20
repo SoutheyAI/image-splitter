@@ -1,0 +1,185 @@
+---
+import Container from "./container.astro";
+import Sectionhead from "./sectionhead.astro";
+---
+
+<section class="bg-gradient-to-t from-gray-50 to-white">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-24 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
+        Frequently Asked Questions
+      </h2>
+      <div class="mt-4 text-center text-sm font-semibold tracking-wide text-gray-600">
+        Common questions about our Image Splitter tool
+      </div>
+
+      <div class="mt-8 space-y-4">
+        <div class="rounded-lg border border-gray-200 shadow-sm">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between px-4 py-4 text-left"
+          >
+            <span class="font-medium text-gray-900">What image formats are supported?</span>
+            <span class="ml-6 flex items-center">
+              <svg
+                class="h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="px-4 pb-4 pt-2">
+            <p class="text-gray-600">
+              Our Image Splitter supports all popular image formats including PNG, JPG, JPEG, and WEBP. You can also choose your preferred format for the output files.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 shadow-sm">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between px-4 py-4 text-left"
+          >
+            <span class="font-medium text-gray-900">Is there a limit to image size?</span>
+            <span class="ml-6 flex items-center">
+              <svg
+                class="h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="px-4 pb-4 pt-2">
+            <p class="text-gray-600">
+              We recommend images up to 20MB for optimal performance. While larger images are supported, they may take longer to process. The maximum dimensions supported are 10000x10000 pixels.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 shadow-sm">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between px-4 py-4 text-left"
+          >
+            <span class="font-medium text-gray-900">How do I get my split images?</span>
+            <span class="ml-6 flex items-center">
+              <svg
+                class="h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="px-4 pb-4 pt-2">
+            <p class="text-gray-600">
+              After splitting your image, you can download all pieces in a single ZIP file, or download them individually. The files are automatically named in sequence (e.g., image_1_1.jpg, image_1_2.jpg) for easy organization.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 shadow-sm">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between px-4 py-4 text-left"
+          >
+            <span class="font-medium text-gray-900">Will the split affect image quality?</span>
+            <span class="ml-6 flex items-center">
+              <svg
+                class="h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="px-4 pb-4 pt-2">
+            <p class="text-gray-600">
+              No, our Image Splitter maintains the original image quality. The split pieces will have the same resolution and quality as your original image, ensuring no loss in image quality during the splitting process.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 shadow-sm">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between px-4 py-4 text-left"
+          >
+            <span class="font-medium text-gray-900">Can I split multiple images at once?</span>
+            <span class="ml-6 flex items-center">
+              <svg
+                class="h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+          </button>
+          <div class="px-4 pb-4 pt-2">
+            <p class="text-gray-600">
+              Yes, our batch processing feature allows you to split multiple images at once. Simply upload multiple images and apply the same split settings to all of them. Each image's pieces will be organized in separate folders in the final ZIP file.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+        
+        // Toggle content visibility
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  });
+</script>
