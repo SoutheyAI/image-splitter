@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ImageSplitter from "../components/ImageSplitter";
+import "../styles/image-splitter.css";
+
+---
+
+<Layout title="Image Splitter - Split Your Images">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-8">Image Splitter</h1>
+    <div class="max-w-4xl mx-auto">
+      <ImageSplitter client:load />
+    </div>
+  </main>
+</Layout>

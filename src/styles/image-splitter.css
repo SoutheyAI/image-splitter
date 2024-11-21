@@ -1,0 +1,38 @@
+/* Additional styles for image splitter */
+.drag-over {
+  border-color: #3b82f6 !important;
+  background-color: #eff6ff !important;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Responsive image container */
+.image-container {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+/* Custom scrollbar */
+.image-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.image-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.image-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

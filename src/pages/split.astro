@@ -7,6 +7,39 @@ const metadata = {
   title: "Split Images Online - Free Image Splitter Tool",
   description: "Split your images into multiple pieces with our free online tool. Perfect for Instagram grids, web design, and social media. No signup required.",
 };
+
+const steps = [
+  {
+    number: 1,
+    title: "Upload",
+    description: "Choose any high-quality image you want to split.",
+    icon: "cloud-upload"
+  },
+  {
+    number: 2,
+    title: "Select layout",
+    description: "Choose from Grid, Carousel, or Custom options to fit your needs.",
+    icon: "layout-grid"
+  },
+  {
+    number: 3,
+    title: "Customize",
+    description: "Set the number of columns (and rows for custom layouts) to create your perfect design.",
+    icon: "settings"
+  },
+  {
+    number: 4,
+    title: "Preview",
+    description: "See how your split image will look and make any necessary adjustments.",
+    icon: "eye"
+  },
+  {
+    number: 5,
+    title: "Download",
+    description: "Get your split images individually or in a convenient zip file, ready to post!",
+    icon: "download"
+  }
+];
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
@@ -21,8 +54,21 @@ const metadata = {
           Split any image into multiple pieces with precision and ease. Perfect for social media, web design, and more.
         </p>
         
+        <!-- Steps Section -->
+        <div class="mb-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+          {steps.map((step) => (
+            <div class="flex flex-col items-center space-y-2">
+              <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                <span class="text-2xl font-bold text-primary-600">{step.number}</span>
+              </div>
+              <h3 class="font-semibold text-lg">{step.title}</h3>
+              <p class="text-sm text-gray-600 text-center">{step.description}</p>
+            </div>
+          ))}
+        </div>
+        
         <!-- Upload Area -->
-        <div class="bg-white p-8 rounded-2xl border-2 border-dashed border-gray-300 hover:border-primary-500 transition-colors">
+        <div id="upload-area" class="bg-white p-8 rounded-2xl border-2 border-dashed border-gray-300 hover:border-primary-500 transition-colors">
           <input type="file" id="imageInput" class="hidden" accept="image/*" />
           
           <!-- Large Upload Button -->
