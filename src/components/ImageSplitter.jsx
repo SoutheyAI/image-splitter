@@ -29,6 +29,7 @@ const ImageSplitter = () => {
   const canvasRef = useRef(null);
   const previewRef = useRef(null);
   const piecePreviewRef = useRef(null);
+  const splitSettingsRef = useRef(null);
 
   const validateFile = (file) => {
     setError('');
@@ -160,6 +161,13 @@ const ImageSplitter = () => {
     generatePiecePreviews();
     
     setPreview(canvas.toDataURL());
+
+    setTimeout(() => {
+      splitSettingsRef.current?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' 
+      });
+    }, 800); // 增加延迟时间，让用户能看到图片加载完成
   };
 
   const generatePiecePreviews = () => {
@@ -486,16 +494,16 @@ const ImageSplitter = () => {
       {image && (
         <>
           {/* Split Settings */}
-          <div className="mb-6">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Split Settings</h3>
+          <div ref={splitSettingsRef} className="mb-4">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Split Settings</h3>
             
             {/* Split Mode Selection */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Split Mode</label>
-              <div className="flex gap-4">
+            <div className="mb-3">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Split Mode</label>
+              <div className="flex gap-2">
                 <button
                   onClick={() => handleModeChange('equal')}
-                  className={`px-4 py-2 rounded-md ${
+                  className={`px-3 py-1.5 rounded-md ${
                     splitMode === 'equal'
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700'
@@ -505,7 +513,7 @@ const ImageSplitter = () => {
                 </button>
                 <button
                   onClick={() => handleModeChange('custom')}
-                  className={`px-4 py-2 rounded-md ${
+                  className={`px-3 py-1.5 rounded-md ${
                     splitMode === 'custom'
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700'
@@ -517,11 +525,11 @@ const ImageSplitter = () => {
             </div>
 
             {splitMode === 'equal' && (
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-3 mb-3">
                 {/* Rows Control */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Rows</label>
-                  <div className="flex items-center gap-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Rows</label>
+                  <div className="flex items-center gap-2">
                     <input
                       type="range"
                       min="1"
@@ -536,15 +544,15 @@ const ImageSplitter = () => {
                       max="10"
                       value={gridSize.rows}
                       onChange={(e) => handleGridChange('rows', e.target.value)}
-                      className="w-20 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      className="w-16 px-2 py-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     />
                   </div>
                 </div>
 
                 {/* Columns Control */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Columns</label>
-                  <div className="flex items-center gap-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Columns</label>
+                  <div className="flex items-center gap-2">
                     <input
                       type="range"
                       min="1"
@@ -559,7 +567,7 @@ const ImageSplitter = () => {
                       max="10"
                       value={gridSize.cols}
                       onChange={(e) => handleGridChange('cols', e.target.value)}
-                      className="w-20 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      className="w-16 px-2 py-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -567,8 +575,8 @@ const ImageSplitter = () => {
             )}
 
             {splitMode === 'custom' && (
-              <div className="mb-4">
-                <p className="text-sm text-gray-600 mb-2">
+              <div className="mb-3">
+                <p className="text-sm text-gray-600 mb-1">
                   Click on the preview to add split lines. Hold Shift for vertical lines.
                 </p>
                 <button
@@ -581,125 +589,132 @@ const ImageSplitter = () => {
             )}
 
             {/* Resolution Settings */}
-            <div className="mt-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Resolution</label>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <input
-                    type="radio"
-                    id="keepOriginal"
-                    checked={resolution.keepOriginal}
-                    onChange={() => handleResolutionChange(true)}
-                    className="mr-2"
-                  />
-                  <label htmlFor="keepOriginal">Keep Original Resolution</label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="radio"
-                    id="customResolution"
-                    checked={!resolution.keepOriginal}
-                    onChange={() => handleResolutionChange(false)}
-                    className="mr-2"
-                  />
-                  <label htmlFor="customResolution">Custom Resolution</label>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Resolution</label>
+              <div className="flex gap-4">
+                <div className="flex-1 p-2 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-center mb-1">
+                    <input
+                      type="radio"
+                      id="keepOriginal"
+                      checked={resolution.keepOriginal}
+                      onChange={() => handleResolutionChange(true)}
+                      className="mr-2"
+                    />
+                    <label htmlFor="keepOriginal" className="text-sm">Keep Original Resolution</label>
+                  </div>
+                  <p className="text-xs text-gray-500">Maintain original quality</p>
                 </div>
                 
-                {!resolution.keepOriginal && (
-                  <div className="grid grid-cols-2 gap-4 pl-6">
-                    <div>
-                      <label className="block text-sm text-gray-600">Width (px)</label>
-                      <input
-                        type="number"
-                        value={resolution.width}
-                        onChange={(e) => handleCustomResolution('width', e.target.value)}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-600">Height (px)</label>
-                      <input
-                        type="number"
-                        value={resolution.height}
-                        onChange={(e) => handleCustomResolution('height', e.target.value)}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
+                <div className="flex-1 p-2 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-center mb-1">
+                    <input
+                      type="radio"
+                      id="customResolution"
+                      checked={!resolution.keepOriginal}
+                      onChange={() => handleResolutionChange(false)}
+                      className="mr-2"
+                    />
+                    <label htmlFor="customResolution" className="text-sm">Custom Resolution</label>
                   </div>
-                )}
+                  {!resolution.keepOriginal && (
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="flex items-center">
+                        <label className="text-xs text-gray-600 w-10">Width:</label>
+                        <input
+                          type="number"
+                          value={resolution.width}
+                          onChange={(e) => handleCustomResolution('width', e.target.value)}
+                          className="w-full px-1 py-0.5 text-sm rounded border-gray-300"
+                        />
+                      </div>
+                      <div className="flex items-center">
+                        <label className="text-xs text-gray-600 w-10">Height:</label>
+                        <input
+                          type="number"
+                          value={resolution.height}
+                          onChange={(e) => handleCustomResolution('height', e.target.value)}
+                          className="w-full px-1 py-0.5 text-sm rounded border-gray-300"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Output Settings */}
-          <div className="mb-6">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Output Settings</h3>
+          <div className="mb-4">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Output Settings</h3>
             
-            {/* Format Selection */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Output Format</label>
-              <div className="flex gap-4">
-                <button
-                  onClick={() => handleOutputFormatChange('zip')}
-                  className={`px-4 py-2 rounded-md ${
-                    outputFormat === 'zip'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
-                >
-                  ZIP (Multiple Files)
-                </button>
-                <button
-                  onClick={() => handleOutputFormatChange('png')}
-                  className={`px-4 py-2 rounded-md ${
-                    outputFormat === 'png'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
-                >
-                  PNG
-                </button>
-                <button
-                  onClick={() => handleOutputFormatChange('jpg')}
-                  className={`px-4 py-2 rounded-md ${
-                    outputFormat === 'jpg'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
-                >
-                  JPG
-                </button>
+            <div className="flex gap-4">
+              {/* Format Selection */}
+              <div className="flex-1">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Format</label>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => handleOutputFormatChange('zip')}
+                    className={`flex-1 px-2 py-1.5 text-sm rounded-md ${
+                      outputFormat === 'zip'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    ZIP
+                  </button>
+                  <button
+                    onClick={() => handleOutputFormatChange('png')}
+                    className={`flex-1 px-2 py-1.5 text-sm rounded-md ${
+                      outputFormat === 'png'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    PNG
+                  </button>
+                  <button
+                    onClick={() => handleOutputFormatChange('jpg')}
+                    className={`flex-1 px-2 py-1.5 text-sm rounded-md ${
+                      outputFormat === 'jpg'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    JPG
+                  </button>
+                </div>
               </div>
+
+              {/* Quality Setting (only for JPG) */}
+              {outputFormat === 'jpg' && (
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Quality ({Math.round(outputQuality * 100)}%)
+                  </label>
+                  <input
+                    type="range"
+                    min="0.1"
+                    max="1"
+                    step="0.1"
+                    value={outputQuality}
+                    onChange={(e) => handleQualityChange(e.target.value)}
+                    className="w-full"
+                  />
+                </div>
+              )}
             </div>
 
-            {/* Quality Setting (only for JPG) */}
-            {outputFormat === 'jpg' && (
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Quality ({Math.round(outputQuality * 100)}%)
-                </label>
-                <input
-                  type="range"
-                  min="0.1"
-                  max="1"
-                  step="0.1"
-                  value={outputQuality}
-                  onChange={(e) => handleQualityChange(e.target.value)}
-                  className="w-full"
-                />
-              </div>
-            )}
-
             {/* Output Preview */}
-            <div className="text-sm text-gray-600">
+            <div className="text-xs text-gray-600 mt-2">
               <p>Output will be saved as:</p>
               {outputFormat === 'zip' ? (
-                <>
-                  <p className="font-mono mt-1">ZIP: {generateZipName()}</p>
-                  <p className="font-mono mt-1">Files: {originalFileName}_row_column.{outputFormat === 'jpg' ? 'jpg' : 'png'}</p>
-                </>
+                <div className="font-mono mt-0.5">
+                  <p>ZIP: {generateZipName()}</p>
+                  <p>Files: {originalFileName}_row_column.{outputFormat === 'jpg' ? 'jpg' : 'png'}</p>
+                </div>
               ) : (
-                <p className="font-mono mt-1">
+                <p className="font-mono mt-0.5">
                   {selectedPiece 
                     ? generateFileName(...selectedPiece.id.split('-'), outputFormat)
                     : `${originalFileName}_row_column.${outputFormat}`}
@@ -707,6 +722,18 @@ const ImageSplitter = () => {
               )}
             </div>
           </div>
+
+          {/* Download Button */}
+          <button
+            onClick={splitImage}
+            disabled={!image}
+            className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white 
+              ${image ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}
+              transition-colors duration-200
+            `}
+          >
+            {selectedPiece && outputFormat !== 'zip' ? 'Download Selected Piece' : 'Split and Download'}
+          </button>
 
           {/* Preview Section */}
           {preview && (
@@ -779,8 +806,8 @@ const ImageSplitter = () => {
                         onClick={handleClosePreview}
                         className="text-gray-400 hover:text-gray-500"
                       >
-                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </button>
                     </div>
@@ -804,17 +831,6 @@ const ImageSplitter = () => {
 
       <canvas ref={canvasRef} style={{ display: 'none' }} />
       <canvas ref={piecePreviewRef} style={{ display: 'none' }} />
-
-      <button
-        onClick={splitImage}
-        disabled={!image}
-        className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white 
-          ${image ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}
-          transition-colors duration-200
-        `}
-      >
-        {selectedPiece && outputFormat !== 'zip' ? 'Download Selected Piece' : 'Split and Download'}
-      </button>
     </div>
   );
 };
