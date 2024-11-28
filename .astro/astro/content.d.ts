@@ -159,6 +159,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"facebook-banner-splitting-guide.md": {
+	id: "facebook-banner-splitting-guide.md";
+  slug: "facebook-banner-splitting-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"instagram-grid-image-splitting-guide.md": {
+	id: "instagram-grid-image-splitting-guide.md";
+  slug: "instagram-grid-image-splitting-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 };
 "team": {
 "janette-lynch.md": {
