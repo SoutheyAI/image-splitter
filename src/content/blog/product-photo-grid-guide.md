@@ -7,7 +7,7 @@ image: {
     src: "/blog/product-grid-guide.webp",
     alt: "Product Photo Grid Guide"
 }
-publishDate: "2024-12-01 15:05"
+publishDate: "2024-12-01 14:48"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [e-commerce, product-photography, grid-layout, image-optimization, marketing]
