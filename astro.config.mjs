@@ -6,11 +6,26 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://imgsplitter.com",
   integrations: [
     tailwind(),
     mdx(),
-    sitemap(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en-US',
+          ja: 'ja-JP',
+          ko: 'ko-KR',
+          de: 'de-DE',
+          fr: 'fr-FR',
+          it: 'it-IT'
+        },
+      },
+    }),
     react(),
   ],
   i18n: {
