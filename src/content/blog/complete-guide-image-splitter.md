@@ -7,7 +7,7 @@ image: {
     src: "/blog/image-splitter-guide.webp",
     alt: "Image Splitter Guide Cover"
 }
-publishDate: "2024-01-24 18:00"
+publishDate: "2023-11-28 19:26"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [image-splitter, tutorial, guide, social-media, design]

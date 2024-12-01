@@ -1,16 +1,16 @@
 ---
 draft: false
-title: "Wedding Photo Grid: The Ultimate Guide"
-description: "Create stunning wedding photo grids with our comprehensive guide. Learn expert tips for layouts, design techniques, and discover the best tools to showcase your special moments beautifully. Perfect for photographers and couples wanting to display their wedding memories in style!"
-snippet: "Master the art of creating stunning wedding photo grids! Learn expert tips for layouts, design techniques, and the best tools to showcase your special moments beautifully."
+title: "Wedding Photo Grid Guide: Create Beautiful Photo Layouts"
+description: "Transform your wedding photos into stunning grid layouts with our comprehensive guide. Learn professional techniques for creating beautiful photo collages, optimize your layouts for various platforms, and preserve your precious memories in style!"
+snippet: "Learn how to create beautiful wedding photo grid layouts that showcase your special moments. Complete guide with tips, tools, and creative ideas."
 image: {
-    src: "/blog/wedding-photo-grid-guide.webp",
+    src: "/blog/wedding-grid-guide.webp",
     alt: "Wedding Photo Grid Guide"
 }
-publishDate: "2024-01-26 15:00"
+publishDate: "2024-12-01 14:48"
 category: "Tutorials"
 author: "Image Splitter Team"
-tags: [wedding, photo-grid, design, tutorial, photography, layout]
+tags: [wedding-photos, grid-layout, photo-editing, image-splitting, design]
 ---
 
 ## Table of Contents

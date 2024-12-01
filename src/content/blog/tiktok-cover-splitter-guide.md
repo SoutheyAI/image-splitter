@@ -7,7 +7,7 @@ image: {
     src: "/blog/tiktok-cover-guide.webp",
     alt: "TikTok Cover Design Guide"
 }
-publishDate: "2024-01-25 19:00"
+publishDate: "2024-11-29 15:28"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [tiktok, cover-design, social-media, image-splitting, branding]

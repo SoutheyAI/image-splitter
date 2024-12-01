@@ -7,7 +7,7 @@ image: {
     src: "/blog/twitter-header-guide.webp",
     alt: "Twitter Header Design Guide"
 }
-publishDate: "2024-01-25 17:00"
+publishDate: "2024-11-29 15:28"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [twitter, header-design, social-media, image-splitting, tutorial]

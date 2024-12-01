@@ -7,7 +7,7 @@ image: {
     src: "/blog/portfolio-grid-guide.webp",
     alt: "Portfolio Grid Design Guide"
 }
-publishDate: "2024-01-25 14:00"
+publishDate: "2024-12-01 14:48"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [portfolio, grid-design, showcase, web-design, tutorial, responsive-design]

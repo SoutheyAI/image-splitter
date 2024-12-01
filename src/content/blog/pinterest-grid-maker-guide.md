@@ -6,7 +6,7 @@ image: {
     src: "/blog/pinterest-grid-guide.webp",
     alt: "Pinterest Grid Layout Design Guide"
 }
-publishDate: "2024-01-25 18:00"
+publishDate: "2024-11-29 15:28"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [pinterest, grid-layout, social-media, image-splitting, design]

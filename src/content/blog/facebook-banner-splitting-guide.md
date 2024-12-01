@@ -6,7 +6,7 @@ image: {
     src: "/blog/facebook-banner-guide.webp",
     alt: "Facebook Banner Creation Guide"
 }
-publishDate: "2024-01-25 16:00"
+publishDate: "2024-11-28 21:11"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [facebook, banner-design, social-media, image-splitting, tutorial]

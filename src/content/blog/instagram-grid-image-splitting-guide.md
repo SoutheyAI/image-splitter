@@ -6,7 +6,7 @@ image: {
     src: "/blog/instagram-grid-guide.webp",
     alt: "Instagram Grid Image Splitting Guide"
 }
-publishDate: "2024-01-25 15:00"
+publishDate: "2024-11-28 20:30"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [instagram, social-media, image-splitting, tutorial, grid-layout]
