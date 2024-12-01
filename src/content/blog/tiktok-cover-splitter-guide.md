@@ -1,6 +1,7 @@
 ---
 draft: false
 title: "TikTok Cover Splitter: Create Eye-Catching Profiles [2024 Guide]"
+description: "Elevate your TikTok presence with our expert guide to video cover design. Learn professional techniques for creating eye-catching covers, optimize your content for maximum visibility, and make your videos stand out in the crowded TikTok feed!"
 snippet: "Master the art of TikTok cover splitting! Learn how to create stunning profile layouts that capture attention and boost engagement. Complete guide with free tools and expert tips."
 image: {
     src: "/blog/tiktok-cover-guide.webp",
@@ -11,6 +12,17 @@ category: "Tutorials"
 author: "Image Splitter Team"
 tags: [tiktok, cover-design, social-media, image-splitting, branding]
 ---
+
+## Table of Contents
+- [What is TikTok Cover Splitting?](#what-is-tiktok-cover-splitting)
+- [Technical Requirements](#technical-requirements)
+- [Creating Your Split Cover](#creating-your-split-cover)
+- [Design Best Practices](#design-best-practices)
+- [Common Challenges and Solutions](#common-challenges-and-solutions)
+- [Advanced Tips](#advanced-tips)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Best Practices for Success](#best-practices-for-success)
+- [Conclusion](#conclusion)
 
 TikTok has revolutionized content creation and sharing, making it crucial for creators and brands to stand out. One powerful way to boost your profile's appeal is through **TikTok cover splitting** - a technique that transforms ordinary profiles into eye-catching visual experiences. In this comprehensive guide, we'll show you how to create stunning split covers that capture attention before viewers even hit play.
 

@@ -173,6 +173,41 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"pinterest-grid-maker-guide.md": {
+	id: "pinterest-grid-maker-guide.md";
+  slug: "pinterest-grid-maker-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"portfolio-grid-maker-guide.md": {
+	id: "portfolio-grid-maker-guide.md";
+  slug: "portfolio-grid-maker-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"tiktok-cover-splitter-guide.md": {
+	id: "tiktok-cover-splitter-guide.md";
+  slug: "tiktok-cover-splitter-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"twitter-header-splitting-guide.md": {
+	id: "twitter-header-splitting-guide.md";
+  slug: "twitter-header-splitting-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"wedding-photo-grid-guide.md": {
+	id: "wedding-photo-grid-guide.md";
+  slug: "wedding-photo-grid-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 };
 "team": {
 "janette-lynch.md": {

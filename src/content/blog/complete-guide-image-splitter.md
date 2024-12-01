@@ -1,16 +1,28 @@
 ---
 draft: false
 title: "Complete Guide to Image Splitter: Split Your Photos Like a Pro"
+description: "Discover the power of image splitting with our comprehensive guide. Learn professional techniques for creating stunning split images, optimize your photos for various platforms, and master the art of visual storytelling through creative image layouts!"
 snippet: "A comprehensive guide to using image splitter tools, perfect for social media enthusiasts, graphic designers, and anyone working with images professionally."
 image: {
-    src: "/image-splitter-guide.webp",
+    src: "/blog/image-splitter-guide.webp",
     alt: "Image Splitter Guide Cover"
 }
-publishDate: "2024-01-25 10:00"
+publishDate: "2024-01-24 18:00"
 category: "Tutorials"
 author: "Image Splitter Team"
 tags: [image-splitter, tutorial, guide, social-media, design]
 ---
+
+## Table of Contents
+- [Introduction](#introduction)
+- [What is an Image Splitter?](#what-is-an-image-splitter)
+- [Why Use an Image Splitter?](#why-use-an-image-splitter)
+- [Key Features and Benefits](#key-features-and-benefits)
+- [How to Use Image Splitter](#how-to-use-image-splitter)
+- [Advanced Tips and Techniques](#advanced-tips-and-techniques)
+- [Common Use Cases](#common-use-cases)
+- [Best Practices and Tips](#best-practices-and-tips)
+- [Conclusion](#conclusion)
 
 In today's digital age, where visuals are key to engaging content, the ability to split images into multiple sections can be a game-changer! Whether you're a social media enthusiast, a graphic designer, or someone working with images professionally, an **image splitter** can help you create stunning visuals with ease. In this complete guide, we'll explore what an **image splitter** is, how it works, its main uses, and how you can leverage it for various creative projects. Let's dive into the world of image splitting!
 

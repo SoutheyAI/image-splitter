@@ -1,6 +1,7 @@
 ---
 draft: false
 title: "Ultimate Twitter Header Splitter Guide: Create Perfect Profile Layouts"
+description: "Master the art of Twitter header design with our in-depth guide. Learn how to create perfectly aligned headers, optimize for both desktop and mobile displays, and make your Twitter profile stand out with professional-looking designs!"
 snippet: "Master the art of Twitter header design with our comprehensive guide. Learn how to split and align your headers perfectly, optimize for both desktop and mobile, and create a stunning profile that stands out."
 image: {
     src: "/blog/twitter-header-guide.webp",
@@ -11,6 +12,17 @@ category: "Tutorials"
 author: "Image Splitter Team"
 tags: [twitter, header-design, social-media, image-splitting, tutorial]
 ---
+
+## Table of Contents
+- [Introduction](#introduction)
+- [What is a Twitter Header Splitter?](#what-is-a-twitter-header-splitter)
+- [Why Split Your Twitter Header?](#why-split-your-twitter-header)
+- [Step-by-Step Guide](#step-by-step-guide)
+- [Design Tips and Best Practices](#design-tips-and-best-practices)
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid)
+- [Best Practices for Success](#best-practices-for-success)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Conclusion](#conclusion)
 
 Twitter headers are a crucial element of your social media presence, serving as the first visual impression visitors get of your profile. A well-designed header can effectively showcase your brand, personality, or message. In this comprehensive guide, we'll explore how to use a **Twitter header splitter** to create stunning profile layouts that work perfectly across all devices.
 

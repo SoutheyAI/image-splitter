@@ -12,6 +12,17 @@ author: "Image Splitter Team"
 tags: [pinterest, grid-layout, social-media, image-splitting, design]
 ---
 
+## Table of Contents
+1. [What is a Pinterest Grid Maker?](#what-is-a-pinterest-grid-maker)
+2. [Why Grid Layouts Matter](#why-grid-layouts-matter)
+3. [Creating Perfect Pinterest Grids](#creating-perfect-pinterest-grids)
+4. [Design Tips for Pinterest Grids](#design-tips-for-pinterest-grids)
+5. [Advanced Grid Techniques](#advanced-grid-techniques)
+6. [Common Issues and Solutions](#common-issues-and-solutions)
+7. [Best Practices for Success](#best-practices-for-success)
+8. [Frequently Asked Questions](#frequently-asked-questions)
+9. [Conclusion](#conclusion)
+
 If you've ever scrolled through Pinterest and admired those perfectly aligned, visually cohesive boards, then you've encountered the magic of a **Pinterest grid maker**. In this comprehensive guide, we'll explore how to create stunning, professional-looking grid layouts that will make your Pinterest profile stand out.
 
 ## What is a Pinterest Grid Maker?
