@@ -152,68 +152,89 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"art-gallery-grid-guide.md": {
+	id: "art-gallery-grid-guide.md";
+  slug: "art-gallery-grid-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"banner-grid-generator-guide.md": {
+	id: "banner-grid-generator-guide.md";
+  slug: "banner-grid-generator-guide";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "complete-guide-image-splitter.md": {
 	id: "complete-guide-image-splitter.md";
   slug: "complete-guide-image-splitter";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "facebook-banner-splitting-guide.md": {
 	id: "facebook-banner-splitting-guide.md";
   slug: "facebook-banner-splitting-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "instagram-grid-image-splitting-guide.md": {
 	id: "instagram-grid-image-splitting-guide.md";
   slug: "instagram-grid-image-splitting-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"photo-collage-maker-guide.md": {
+	id: "photo-collage-maker-guide.md";
+  slug: "photo-collage-maker-guide";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "pinterest-grid-maker-guide.md": {
 	id: "pinterest-grid-maker-guide.md";
   slug: "pinterest-grid-maker-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "portfolio-grid-maker-guide.md": {
 	id: "portfolio-grid-maker-guide.md";
   slug: "portfolio-grid-maker-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "product-photo-grid-guide.md": {
 	id: "product-photo-grid-guide.md";
   slug: "product-photo-grid-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "tiktok-cover-splitter-guide.md": {
 	id: "tiktok-cover-splitter-guide.md";
   slug: "tiktok-cover-splitter-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "twitter-header-splitting-guide.md": {
 	id: "twitter-header-splitting-guide.md";
   slug: "twitter-header-splitting-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "wedding-photo-grid-guide.md": {
 	id: "wedding-photo-grid-guide.md";
   slug: "wedding-photo-grid-guide";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 "team": {
@@ -222,21 +243,21 @@ declare module 'astro:content' {
   slug: "janette-lynch";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "marcell-ziemann.md": {
 	id: "marcell-ziemann.md";
   slug: "marcell-ziemann";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "robert-palmer.md": {
 	id: "robert-palmer.md";
   slug: "robert-palmer";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -248,5 +269,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
