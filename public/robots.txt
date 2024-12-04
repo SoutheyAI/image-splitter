@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
 
-Sitemap: http://astroship.web3templates.com/sitemap-index.xml
+# Allow search engines to crawl JavaScript and CSS files
+Allow: /*.js$
+Allow: /*.css$
+
+# Sitemap location
+Sitemap: https://imgsplitter.com/sitemap.xml
